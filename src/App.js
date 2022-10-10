@@ -1,25 +1,19 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Home from "./components/Home/Home/Home";
-import ServiceDetail from "./components/ServiceDetail/ServiceDetail";
-import Success from "./components/ServiceDetail/Success";
-import Login from "./components/Shared/Login/Login";
-import Navbar from "./components/Shared/Navbar/Navbar";
-import NotFound from "./components/Shared/NotFound/NotFound";
-import PrivateRoute from "./components/Shared/PrivateRoute/PrivateRoute";
-import AuthProvider from "./contexts/AuthProvider";
-
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Home from './components/Home/Home/Home'
+import ServiceDetail from './components/ServiceDetail/ServiceDetail'
+import Success from './components/ServiceDetail/Success'
+import Login from './components/Shared/Login/Login'
+import Navbar from './components/Shared/Navbar/Navbar'
+import NotFound from './components/Shared/NotFound/NotFound'
+import PrivateRoute from './components/Shared/PrivateRoute/PrivateRoute'
+import AuthProvider from './contexts/AuthProvider'
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -42,7 +36,7 @@ function App() {
         </Switch>
       </Router>
     </AuthProvider>
-  );
+  )
 }
 
-export default App;
+export default App
